@@ -1,0 +1,68 @@
+{
+  "private": "true",
+  "engines": {
+    "npm": "6.0.0",
+    "node": "12.0.0"
+  },
+  "name": "full",
+  "version": "1.2.3",
+  "description": "Package description",
+  "keywords": ["c", "b", "a"],
+  "files": ["test", "src"],
+  "bin": "bin.js",
+  "main": "index.js",
+  "repository": {
+    "url": "git@host.com:test/repo.git",
+    "type": "git"
+  },
+  "homepage": "https://host.com/test/repo",
+  "bugs": "https://host.com/test/repo/issues",
+  "contributors": [
+    {
+      "name": "John Appleseed",
+      "email": "john.appleseed@apple.com"
+    },
+    {
+      "name": "Jane Appleseed",
+      "email": "jane.appleseed@apple.com"
+    }
+  ],
+  "author": "Steve Wozniak <steve@woz.org>",
+  "license": "MIT",
+  "scripts": {
+    "build": "./build.sh",
+    "test": "./test.sh",
+    "lint": "./lint.sh"
+  },
+  "bundledDependencies": {
+    "lodash": "^2.0.0",
+    "express": "^1.0.0"
+  },
+  "optionalDependencies": {
+    "fibers": "^2.0.0",
+    "bluebird": "^1.0.0"
+  },
+  "peerDependencies": {
+    "vue-template-compiler": "^2.0.0",
+    "vue": "^1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^2.0.0",
+    "eslint": "^1.0.0"
+  },
+  "dependencies": {
+    "lodash": "^2.0.0",
+    "express": "^1.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://internal.host.com/registry",
+    "access": "public"
+  },
+  "jest": {
+    "bail": 1,
+    "verbose": true
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
