@@ -1,4 +1,4 @@
-# pretty-package
+# nice-package-json
 
 > An opinionated formatter for `package.json` files
 
@@ -7,27 +7,27 @@
 Format the `package.json` in the current working directory:
 
 ```console
-$ npx pretty-package --write
+$ npx nice-package-json --write
 ```
 
 Or just lint it:
 
 ```console
-$ npx pretty-package --check
+$ npx nice-package-json --check
 ```
 
 Or format a file named something other than `package.json`:
 
 ```console
-$ npx pretty-package --write pkg.json
+$ npx nice-package-json --write pkg.json
 ```
 
 ### Programmatically
 
 ```javascript
-const prettyPkg = require("pretty-pkg");
+const nicePkg = require("nice-package-json");
 const pkg = require("./package.json");
-await fs.writeFile("package.json", prettyPkg(pkg));
+await fs.writeFile("package.json", nicePackageJson(pkg));
 ```
 
 ## Formatting
