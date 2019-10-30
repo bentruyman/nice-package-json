@@ -1,5 +1,7 @@
 # nice-package-json
 
+[![Build Status](https://travis-ci.org/bentruyman/nice-package-json.svg?branch=develop)](https://travis-ci.org/bentruyman/nice-package-json)
+
 > An opinionated formatter for `package.json` files
 
 ## Usage
