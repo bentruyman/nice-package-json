@@ -2,9 +2,14 @@
   "name": "nice-package-json",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/bentruyman/nice-package-json",
+  "author": "Ben Truyman <ben@truyman.com>",
   "license": "MIT",
   "scripts": {
     "test": "jest"
+  },
+  "dependencies": {
+    "meow": "^5.0.0"
   },
   "devDependencies": {
     "jest": "^24.9.0"

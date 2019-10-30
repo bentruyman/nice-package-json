@@ -27,10 +27,7 @@ const KEY_ORDER = [
   "workspaces"
 ];
 
-const SORTABLE_STR_KEY = [
-  "files",
-  "keywords"
-];
+const SORTABLE_STR_KEY = ["files", "keywords"];
 
 const SORTABLE_OBJ_KEY = [
   "engines",
@@ -44,9 +41,8 @@ const SORTABLE_OBJ_KEY = [
   "optionalDependencies"
 ];
 
-module.exports = function prettyPackage(originalPackage) {
+module.exports = function nicePackageJson(originalPackage) {
   const pkg = { ...originalPackage };
-  const extraKeys = [];
   const formatted = {};
 
   for (const key of KEY_ORDER) {
@@ -56,6 +52,11 @@ module.exports = function prettyPackage(originalPackage) {
       } else if (SORTABLE_OBJ_KEY.includes(key)) {
         const originalObj = pkg[key];
         const sortedObj = {};
+
+        if (typeof originalObj === "string") {
+          formatted[key] = originalObj;
+          continue;
+        }
 
         Object.keys(originalObj)
           .sort()

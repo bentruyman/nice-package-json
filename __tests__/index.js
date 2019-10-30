@@ -3,7 +3,7 @@
 const { readFile } = require("fs").promises;
 const { join } = require("path");
 
-const prettyPackage = require("../");
+const nicePackageJson = require("../");
 
 async function readJson(filename) {
   return JSON.parse(await readFile(filename), "utf8");
@@ -16,7 +16,7 @@ function fixture(filename) {
 test("full.json", async () => {
   const input = await readJson(fixture("input/full.json"));
   const expected = await readFile(fixture("expected/full.json"), "utf8");
-  const output = prettyPackage(input);
+  const output = nicePackageJson(input);
 
   expect(output).toEqual(expected);
 });
