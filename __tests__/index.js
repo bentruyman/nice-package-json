@@ -1,9 +1,12 @@
 "use strict";
 
-const { readFile } = require("fs").promises;
+const fs = require("fs");
 const { join } = require("path");
+const { promisify } = require("util");
 
 const nicePackageJson = require("../");
+
+const readFile = promisify(fs.readFile);
 
 async function readJson(filename) {
   return JSON.parse(await readFile(filename), "utf8");

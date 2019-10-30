@@ -1,12 +1,16 @@
 #!/usr/bin/env node
 "use strict";
 
-const fs = require("fs").promises;
+const fs = require("fs");
 const path = require("path");
+const { promisify } = require('util');
+
 
 const meow = require("meow");
 
 const nicePackageJson = require("./");
+
+const writeFile = promisify(fs.writeFile);
 
 const cli = meow(
   `
@@ -41,7 +45,7 @@ async function main() {
   if (cli.flags.write === false) {
     return console.log(formatted);
   } else {
-    return fs.writeFile(pkgPath, formatted);
+    return writeFile(pkgPath, formatted);
   }
 }
 
