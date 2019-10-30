@@ -30,7 +30,7 @@ const cli = meow(
 let pkgPath = path.join(process.cwd(), "package.json");
 
 if (cli.input[0]) {
-  pkgPath = path.join(process.cwd(), cli.input[0]);
+  pkgPath = path.resolve(process.cwd(), cli.input[0]);
 }
 
 const pkg = require(pkgPath);
