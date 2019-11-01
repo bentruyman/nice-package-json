@@ -43,7 +43,7 @@ const formatted = nicePackageJson(pkg);
 
 async function main() {
   if (cli.flags.write === false) {
-    return console.log(formatted);
+    return process.stdout.write(formatted);
   } else {
     return writeFile(pkgPath, formatted);
   }
