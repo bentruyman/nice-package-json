@@ -9,12 +9,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "ansi-colors": "^4.1.1",
     "meow": "^5.0.0"
   },
   "devDependencies": {
     "jest": "^24.9.0"
   },
   "volta": {
-    "node": "8.16.2"
+    "node": "8.16.2",
+    "yarn": "1.19.1"
   }
 }
