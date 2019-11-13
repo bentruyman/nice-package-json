@@ -6,16 +6,16 @@
 
 ## Usage
 
-Format the `package.json` in the current working directory:
+Print a formatted `package.json` file from the current working directory:
+
+```console
+$ npx nice-package-json
+```
+
+Format and overwrite the `package.json` in the current working directory:
 
 ```console
 $ npx nice-package-json --write
-```
-
-Or just lint it:
-
-```console
-$ npx nice-package-json --check
 ```
 
 Or format a file named something other than `package.json`:
