@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "bin": "bin.js",
+  "files": [
+    "bin.js",
+    "index.d.ts",
+    "index.js"
+  ],
   "repository": "bentruyman/nice-package-json",
   "author": "Ben Truyman <ben@truyman.com>",
   "license": "MIT",
