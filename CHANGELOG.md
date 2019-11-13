@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/bentruyman/nice-package-json/compare/v1.0.0...v1.0.1) (2019-11-13)
+
+
+### Bug Fixes
+
+* add missing 'bin' entry from package.json ([55d1ab3](https://github.com/bentruyman/nice-package-json/commit/55d1ab31c37b9aeb52c0a427861cf3bf4cfe08b9))
+
 ## 1.0.0 (2019-11-13)
 
 
