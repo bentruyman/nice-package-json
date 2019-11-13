@@ -2,9 +2,7 @@
   "name": "nice-package-json",
   "version": "1.0.0",
   "main": "index.js",
-  "bin": {
-    "nice-package-json": "bin.js"
-  },
+  "bin": "bin.js",
   "repository": "bentruyman/nice-package-json",
   "author": "Ben Truyman <ben@truyman.com>",
   "license": "MIT",
