@@ -5,7 +5,7 @@
   "bin": {
     "nice-package-json": "bin.js"
   },
-  "repository": "https://github.com/bentruyman/nice-package-json",
+  "repository": "bentruyman/nice-package-json",
   "author": "Ben Truyman <ben@truyman.com>",
   "license": "MIT",
   "scripts": {
