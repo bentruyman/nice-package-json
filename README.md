@@ -24,6 +24,19 @@ Or format a file named something other than `package.json`:
 $ npx nice-package-json --write pkg.json
 ```
 
+Compare with the current `package.json` file:
+
+```console
+$ npx nice-package-json | diff package.json -
+```
+
+Format each `package.json` in a Yarn-managed monorepo:
+
+```console
+$ yarn add -DW nice-package-json # only run once
+$ yarn workspaces run nice-package-json --write
+```
+
 ### Programmatically
 
 ```javascript
