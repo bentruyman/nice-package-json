@@ -1,16 +1,13 @@
 #!/usr/bin/env node
 "use strict";
 
-const fs = require("fs");
+const { lstatSync, readFileSync, writeFileSync } = require("fs");
 const { join, resolve } = require("path");
-const { promisify } = require("util");
 
 const c = require("ansi-colors");
 const meow = require("meow");
 
 const nicePackageJson = require("./");
-
-const writeFile = promisify(fs.writeFile);
 
 const FLAGS = {
   write: { type: "boolean" }
@@ -51,7 +48,7 @@ function main() {
   let stat;
 
   try {
-    stat = fs.lstatSync(pkgPath);
+    stat = lstatSync(pkgPath);
   } catch (e) {
     err("no package.json file found");
   }
@@ -61,16 +58,17 @@ function main() {
   }
 
   try {
-    const pkgData = fs.readFileSync(pkgPath);
+    const pkgData = readFileSync(pkgPath);
     const pkg = JSON.parse(pkgData);
     const formatted = nicePackageJson(pkg);
     if (cli.flags.write === true) {
-      return writeFile(pkgPath, formatted);
+      writeFileSync(pkgPath, formatted);
     } else {
-      return process.stdout.write(formatted);
+      process.stdout.write(formatted);
     }
   } catch (e) {
-    console.error("unknown error", e);
+    console.error("Unknown Error:", e);
+    process.exit(1);
   }
 }
 
