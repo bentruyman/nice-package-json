@@ -8,6 +8,7 @@ const KEY_ORDER = [
   "keywords",
   "engines",
   "main",
+  "type",
   "bin",
   "files",
   "homepage",
