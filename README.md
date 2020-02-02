@@ -57,6 +57,7 @@ await fs.writeFile("package.json", nicePackageJson(pkg));
   - `keywords`
   - `engines`
   - `main`
+  - `type`
   - `bin`
   - `files`
   - `homepage`
