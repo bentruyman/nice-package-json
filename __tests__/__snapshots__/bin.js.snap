@@ -16,6 +16,7 @@ exports[`cli when a path is specified and is a directory prints a formatted pack
     \\"npm\\": \\"6.0.0\\"
   },
   \\"main\\": \\"index.js\\",
+  \\"type\\": \\"module\\",
   \\"bin\\": \\"bin.js\\",
   \\"files\\": [
     \\"src\\",
@@ -95,6 +96,7 @@ exports[`cli when no path is specified prints a formatted package.json from the 
     \\"npm\\": \\"6.0.0\\"
   },
   \\"main\\": \\"index.js\\",
+  \\"type\\": \\"module\\",
   \\"bin\\": \\"bin.js\\",
   \\"files\\": [
     \\"src\\",
