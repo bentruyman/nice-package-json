@@ -15,8 +15,10 @@ exports[`cli when a path is specified and is a directory prints a formatted pack
     \\"node\\": \\"12.0.0\\",
     \\"npm\\": \\"6.0.0\\"
   },
-  \\"main\\": \\"index.js\\",
   \\"type\\": \\"module\\",
+  \\"main\\": \\"dist/index.js\\",
+  \\"module\\": \\"dist/index.mjs\\",
+  \\"svelte\\": \\"src/index.js\\",
   \\"bin\\": \\"bin.js\\",
   \\"files\\": [
     \\"src\\",
@@ -95,8 +97,10 @@ exports[`cli when no path is specified prints a formatted package.json from the 
     \\"node\\": \\"12.0.0\\",
     \\"npm\\": \\"6.0.0\\"
   },
-  \\"main\\": \\"index.js\\",
   \\"type\\": \\"module\\",
+  \\"main\\": \\"dist/index.js\\",
+  \\"module\\": \\"dist/index.mjs\\",
+  \\"svelte\\": \\"src/index.js\\",
   \\"bin\\": \\"bin.js\\",
   \\"files\\": [
     \\"src\\",

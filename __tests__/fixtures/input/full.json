@@ -8,10 +8,12 @@
   "name": "full",
   "version": "1.2.3",
   "description": "Package description",
+  "module": "dist/index.mjs",
+  "svelte": "src/index.js",
   "keywords": ["c", "b", "a"],
   "files": ["test", "src"],
   "bin": "bin.js",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": {
     "url": "git@host.com:test/repo.git",
     "type": "git"

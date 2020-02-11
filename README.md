@@ -56,8 +56,10 @@ await fs.writeFile("package.json", nicePackageJson(pkg));
   - `description`
   - `keywords`
   - `engines`
-  - `main`
   - `type`
+  - `main`
+  - `module`
+  - `svelte`
   - `bin`
   - `files`
   - `homepage`
