@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`cli when a path is specified and is a directory prints a formatted package.json from the specified directory 1`] = `
+exports[`$ nice-package-json /path/to/dir prints a formatted package.json from the specified directory 1`] = `
 "{
   \\"name\\": \\"full\\",
   \\"private\\": \\"true\\",
@@ -82,7 +82,9 @@ exports[`cli when a path is specified and is a directory prints a formatted pack
 "
 `;
 
-exports[`cli when no path is specified prints a formatted package.json from the current directory 1`] = `
+exports[`$ nice-package-json /path/to/dir shows an error when no package.json file is found 1`] = `""`;
+
+exports[`$ nice-package-json /path/to/package.json prints a formatted package.json using the specified file 1`] = `
 "{
   \\"name\\": \\"full\\",
   \\"private\\": \\"true\\",
@@ -164,7 +166,91 @@ exports[`cli when no path is specified prints a formatted package.json from the 
 "
 `;
 
-exports[`cli when no path is specified shows an error when no package.json file is found 1`] = `
+exports[`$ nice-package-json /path/to/package.json shows an error if the file is not valid JSON 1`] = `""`;
+
+exports[`$ nice-package-json prints a formatted package.json from the current directory 1`] = `
+"{
+  \\"name\\": \\"full\\",
+  \\"private\\": \\"true\\",
+  \\"version\\": \\"1.2.3\\",
+  \\"description\\": \\"Package description\\",
+  \\"keywords\\": [
+    \\"a\\",
+    \\"b\\",
+    \\"c\\"
+  ],
+  \\"engines\\": {
+    \\"node\\": \\"12.0.0\\",
+    \\"npm\\": \\"6.0.0\\"
+  },
+  \\"type\\": \\"module\\",
+  \\"main\\": \\"dist/index.js\\",
+  \\"module\\": \\"dist/index.mjs\\",
+  \\"svelte\\": \\"src/index.js\\",
+  \\"bin\\": \\"bin.js\\",
+  \\"files\\": [
+    \\"src\\",
+    \\"test\\"
+  ],
+  \\"homepage\\": \\"https://host.com/test/repo\\",
+  \\"bugs\\": \\"https://host.com/test/repo/issues\\",
+  \\"repository\\": {
+    \\"type\\": \\"git\\",
+    \\"url\\": \\"git@host.com:test/repo.git\\"
+  },
+  \\"author\\": \\"Steve Wozniak <steve@woz.org>\\",
+  \\"contributors\\": [
+    {
+      \\"name\\": \\"Jane Appleseed\\",
+      \\"email\\": \\"jane.appleseed@apple.com\\"
+    },
+    {
+      \\"name\\": \\"John Appleseed\\",
+      \\"email\\": \\"john.appleseed@apple.com\\"
+    }
+  ],
+  \\"license\\": \\"MIT\\",
+  \\"scripts\\": {
+    \\"build\\": \\"./build.sh\\",
+    \\"lint\\": \\"./lint.sh\\",
+    \\"test\\": \\"./test.sh\\"
+  },
+  \\"dependencies\\": {
+    \\"express\\": \\"^1.0.0\\",
+    \\"lodash\\": \\"^2.0.0\\"
+  },
+  \\"devDependencies\\": {
+    \\"eslint\\": \\"^1.0.0\\",
+    \\"jest\\": \\"^2.0.0\\"
+  },
+  \\"bundledDependencies\\": {
+    \\"express\\": \\"^1.0.0\\",
+    \\"lodash\\": \\"^2.0.0\\"
+  },
+  \\"optionalDependencies\\": {
+    \\"bluebird\\": \\"^1.0.0\\",
+    \\"fibers\\": \\"^2.0.0\\"
+  },
+  \\"peerDependencies\\": {
+    \\"vue\\": \\"^1.0.0\\",
+    \\"vue-template-compiler\\": \\"^2.0.0\\"
+  },
+  \\"publishConfig\\": {
+    \\"access\\": \\"public\\",
+    \\"registry\\": \\"https://internal.host.com/registry\\"
+  },
+  \\"eslintConfig\\": {
+    \\"extends\\": \\"standard\\"
+  },
+  \\"jest\\": {
+    \\"bail\\": 1,
+    \\"verbose\\": true
+  }
+}
+"
+`;
+
+exports[`$ nice-package-json shows an error when no package.json file is found 1`] = `
 "[31mError:[39m no package.json file found
 "
 `;
