@@ -10,7 +10,7 @@ const meow = require("meow");
 const nicePackageJson = require("./");
 
 const FLAGS = {
-  write: { type: "boolean" }
+  write: { type: "boolean" },
 };
 
 const KNOWN_FLAG_NAMES = Object.keys(FLAGS);
@@ -34,7 +34,7 @@ function main() {
     { flags: FLAGS }
   );
 
-  Object.keys(cli.flags).forEach(flag => {
+  Object.keys(cli.flags).forEach((flag) => {
     if (KNOWN_FLAG_NAMES.includes(flag) === false) {
       err(`invalid argument "${flag}"`);
       process.exit(1);
@@ -59,12 +59,14 @@ function main() {
 
   try {
     const pkgData = readFileSync(pkgPath);
-    const pkg = JSON.parse(pkgData);
-    const formatted = nicePackageJson(pkg);
+    const inputPkg = JSON.parse(pkgData);
+    const formattedPkg = nicePackageJson(inputPkg);
     if (cli.flags.write === true) {
-      writeFileSync(pkgPath, formatted);
+      if (pkgData.toString() !== formattedPkg) {
+        writeFileSync(pkgPath, formattedPkg);
+      }
     } else {
-      process.stdout.write(formatted);
+      process.stdout.write(formattedPkg);
     }
   } catch (e) {
     console.error("Unknown Error:", e);
