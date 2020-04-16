@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/bentruyman/nice-package-json/compare/v1.2.0...v1.3.0) (2020-04-16)
+
+
+### Features
+
+* don't write to unchanged `package.json` files ([ab73a1c](https://github.com/bentruyman/nice-package-json/commit/ab73a1ca0a68556a126f74b586ba7d81a4cb695f)), closes [#3](https://github.com/bentruyman/nice-package-json/issues/3)
+* spring cleaning ([a390b0e](https://github.com/bentruyman/nice-package-json/commit/a390b0e0bf4e2e90fe8c6e6499e2b1a19ad46d96))
+
 ## [1.2.0](https://github.com/bentruyman/nice-package-json/compare/v1.1.0...v1.2.0) (2020-02-11)
 
 
