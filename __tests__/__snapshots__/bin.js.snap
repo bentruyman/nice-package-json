@@ -30,18 +30,18 @@ exports[`$ nice-package-json /path/to/dir prints a formatted package.json from t
     \\"type\\": \\"git\\",
     \\"url\\": \\"git@host.com:test/repo.git\\"
   },
-  \\"author\\": \\"Steve Wozniak <steve@woz.org>\\",
+  \\"author\\": \\"Barney Rubble <b@rubble.com>\\",
   \\"contributors\\": [
     {
-      \\"name\\": \\"Jane Appleseed\\",
-      \\"email\\": \\"jane.appleseed@apple.com\\"
+      \\"name\\": \\"Jane Smith\\",
+      \\"email\\": \\"jane.smith@host.com\\"
     },
-    \\"Jane Appleseed <jane.appleseed@apple.com>\\",
+    \\"Jane Smith <jane.smith@host.com>\\",
     {
-      \\"name\\": \\"John Appleseed\\",
-      \\"email\\": \\"john.appleseed@apple.com\\"
+      \\"name\\": \\"John Smith\\",
+      \\"email\\": \\"john.smith@host.com\\"
     },
-    \\"John Appleseed <john.appleseed@apple.com>\\"
+    \\"John Smith <john.smith@host.com>\\"
   ],
   \\"license\\": \\"MIT\\",
   \\"scripts\\": {
@@ -116,18 +116,18 @@ exports[`$ nice-package-json /path/to/package.json prints a formatted package.js
     \\"type\\": \\"git\\",
     \\"url\\": \\"git@host.com:test/repo.git\\"
   },
-  \\"author\\": \\"Steve Wozniak <steve@woz.org>\\",
+  \\"author\\": \\"Barney Rubble <b@rubble.com>\\",
   \\"contributors\\": [
     {
-      \\"name\\": \\"Jane Appleseed\\",
-      \\"email\\": \\"jane.appleseed@apple.com\\"
+      \\"name\\": \\"Jane Smith\\",
+      \\"email\\": \\"jane.smith@host.com\\"
     },
-    \\"Jane Appleseed <jane.appleseed@apple.com>\\",
+    \\"Jane Smith <jane.smith@host.com>\\",
     {
-      \\"name\\": \\"John Appleseed\\",
-      \\"email\\": \\"john.appleseed@apple.com\\"
+      \\"name\\": \\"John Smith\\",
+      \\"email\\": \\"john.smith@host.com\\"
     },
-    \\"John Appleseed <john.appleseed@apple.com>\\"
+    \\"John Smith <john.smith@host.com>\\"
   ],
   \\"license\\": \\"MIT\\",
   \\"scripts\\": {
@@ -202,18 +202,18 @@ exports[`$ nice-package-json prints a formatted package.json from the current di
     \\"type\\": \\"git\\",
     \\"url\\": \\"git@host.com:test/repo.git\\"
   },
-  \\"author\\": \\"Steve Wozniak <steve@woz.org>\\",
+  \\"author\\": \\"Barney Rubble <b@rubble.com>\\",
   \\"contributors\\": [
     {
-      \\"name\\": \\"Jane Appleseed\\",
-      \\"email\\": \\"jane.appleseed@apple.com\\"
+      \\"name\\": \\"Jane Smith\\",
+      \\"email\\": \\"jane.smith@host.com\\"
     },
-    \\"Jane Appleseed <jane.appleseed@apple.com>\\",
+    \\"Jane Smith <jane.smith@host.com>\\",
     {
-      \\"name\\": \\"John Appleseed\\",
-      \\"email\\": \\"john.appleseed@apple.com\\"
+      \\"name\\": \\"John Smith\\",
+      \\"email\\": \\"john.smith@host.com\\"
     },
-    \\"John Appleseed <john.appleseed@apple.com>\\"
+    \\"John Smith <john.smith@host.com>\\"
   ],
   \\"license\\": \\"MIT\\",
   \\"scripts\\": {

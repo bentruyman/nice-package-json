@@ -22,17 +22,17 @@
   "bugs": "https://host.com/test/repo/issues",
   "contributors": [
     {
-      "name": "John Appleseed",
-      "email": "john.appleseed@apple.com"
+      "name": "John Smith",
+      "email": "john.smith@host.com"
     },
     {
-      "name": "Jane Appleseed",
-      "email": "jane.appleseed@apple.com"
+      "name": "Jane Smith",
+      "email": "jane.smith@host.com"
     },
-    "John Appleseed <john.appleseed@apple.com>",
-    "Jane Appleseed <jane.appleseed@apple.com>"
+    "John Smith <john.smith@host.com>",
+    "Jane Smith <jane.smith@host.com>"
   ],
-  "author": "Steve Wozniak <steve@woz.org>",
+  "author": "Barney Rubble <b@rubble.com>",
   "license": "MIT",
   "scripts": {
     "build": "./build.sh",
