@@ -27,7 +27,7 @@ const KEY_ORDER = [
   "peerDependencies",
   "publishConfig",
   "config",
-  "workspaces"
+  "workspaces",
 ];
 
 const SORTABLE_STR_KEY = ["files", "keywords"];
@@ -41,7 +41,7 @@ const SORTABLE_OBJ_KEY = [
   "devDependencies",
   "peerDependencies",
   "bundledDependencies",
-  "optionalDependencies"
+  "optionalDependencies",
 ];
 
 module.exports = function nicePackageJson(originalPackage) {
@@ -63,7 +63,7 @@ module.exports = function nicePackageJson(originalPackage) {
 
         Object.keys(originalObj)
           .sort()
-          .forEach(k => {
+          .forEach((k) => {
             sortedObj[k] = originalObj[k];
           });
 
@@ -83,7 +83,7 @@ module.exports = function nicePackageJson(originalPackage) {
 
   Object.keys(pkg)
     .sort()
-    .forEach(k => {
+    .forEach((k) => {
       formatted[k] = pkg[k];
     });
 
