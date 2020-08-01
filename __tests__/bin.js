@@ -51,9 +51,13 @@ describe("$ nice-package-json", () => {
 
       copyFileSync(inputFile, targetPkg);
 
-      expect(readFileSync(targetPkg)).toEqual(readFileSync(inputFile));
+      expect(readFileSync(targetPkg).toString()).toEqual(
+        readFileSync(inputFile).toString()
+      );
       await exec({ cwd: dir.name }, ["--write"]);
-      expect(readFileSync(targetPkg)).toEqual(readFileSync(expectedFile));
+      expect(readFileSync(targetPkg).toString()).toEqual(
+        readFileSync(expectedFile).toString()
+      );
     });
 
     it("doesn't touch an existing package.json if no changes are made", async () => {
