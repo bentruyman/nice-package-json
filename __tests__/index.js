@@ -23,3 +23,12 @@ test("full.json", async () => {
 
   expect(output).toEqual(expected);
 });
+
+test("repeat runs generate the same output", async () => {
+  const input = await readJson(fixture("input/full.json"));
+  const expected = await readFile(fixture("expected/full.json"), "utf8");
+  const output = nicePackageJson(input);
+
+  expect(output).toEqual(expected);
+  expect(nicePackageJson(JSON.parse(output))).toEqual(expected);
+});

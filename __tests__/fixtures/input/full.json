@@ -28,7 +28,9 @@
     {
       "name": "Jane Appleseed",
       "email": "jane.appleseed@apple.com"
-    }
+    },
+    "John Appleseed <john.appleseed@apple.com>",
+    "Jane Appleseed <jane.appleseed@apple.com>"
   ],
   "author": "Steve Wozniak <steve@woz.org>",
   "license": "MIT",
