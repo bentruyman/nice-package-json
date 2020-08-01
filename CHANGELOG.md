@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/bentruyman/nice-package-json/compare/v1.3.0...v1.4.0) (2020-08-01)
+
+
+### Features
+
+* allow for multiple inputs ([117be0a](https://github.com/bentruyman/nice-package-json/commit/117be0a88538e29145fe2d04152e3eb21927701a)), closes [#1](https://github.com/bentruyman/nice-package-json/issues/1)
+
+
+### Bug Fixes
+
+* order 'contributors' based on name or value ([035ab48](https://github.com/bentruyman/nice-package-json/commit/035ab486e992fd181c39cf5f3d68d9f9e6a72ff1)), closes [#12](https://github.com/bentruyman/nice-package-json/issues/12)
+
 ## [1.3.0](https://github.com/bentruyman/nice-package-json/compare/v1.2.0...v1.3.0) (2020-04-16)
 
 
