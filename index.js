@@ -70,8 +70,10 @@ module.exports = function nicePackageJson(originalPackage) {
         formatted[key] = sortedObj;
       } else if (key === "contributors") {
         formatted[key] = pkg[key].sort((a, b) => {
-          // TODO: handle contributors with no 'name'
-          return a.name > b.name ? 1 : -1;
+          const valueA = typeof a === "object" ? a.name : a;
+          const valueB = typeof b === "object" ? b.name : b;
+
+          return valueA > valueB ? 1 : -1;
         });
       } else {
         formatted[key] = pkg[key];

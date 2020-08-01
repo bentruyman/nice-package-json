@@ -36,10 +36,12 @@ exports[`$ nice-package-json /path/to/dir prints a formatted package.json from t
       \\"name\\": \\"Jane Appleseed\\",
       \\"email\\": \\"jane.appleseed@apple.com\\"
     },
+    \\"Jane Appleseed <jane.appleseed@apple.com>\\",
     {
       \\"name\\": \\"John Appleseed\\",
       \\"email\\": \\"john.appleseed@apple.com\\"
-    }
+    },
+    \\"John Appleseed <john.appleseed@apple.com>\\"
   ],
   \\"license\\": \\"MIT\\",
   \\"scripts\\": {
@@ -120,10 +122,12 @@ exports[`$ nice-package-json /path/to/package.json prints a formatted package.js
       \\"name\\": \\"Jane Appleseed\\",
       \\"email\\": \\"jane.appleseed@apple.com\\"
     },
+    \\"Jane Appleseed <jane.appleseed@apple.com>\\",
     {
       \\"name\\": \\"John Appleseed\\",
       \\"email\\": \\"john.appleseed@apple.com\\"
-    }
+    },
+    \\"John Appleseed <john.appleseed@apple.com>\\"
   ],
   \\"license\\": \\"MIT\\",
   \\"scripts\\": {
@@ -204,10 +208,12 @@ exports[`$ nice-package-json prints a formatted package.json from the current di
       \\"name\\": \\"Jane Appleseed\\",
       \\"email\\": \\"jane.appleseed@apple.com\\"
     },
+    \\"Jane Appleseed <jane.appleseed@apple.com>\\",
     {
       \\"name\\": \\"John Appleseed\\",
       \\"email\\": \\"john.appleseed@apple.com\\"
-    }
+    },
+    \\"John Appleseed <john.appleseed@apple.com>\\"
   ],
   \\"license\\": \\"MIT\\",
   \\"scripts\\": {
