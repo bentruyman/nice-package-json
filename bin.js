@@ -41,29 +41,33 @@ function main() {
     }
   });
 
-  let pkgPath = cli.input[0] // if a package.json path is specified
-    ? resolve(process.cwd(), cli.input[0]) // use it
-    : join(process.cwd(), "package.json"); // or assume a package.json in cwd
+  let inputs =
+    cli.input.length === 0 // if no input is provided
+      ? [resolveInput(join(process.cwd(), "package.json"))] // or assume a package.json in cwd
+      : cli.input.map(resolveInput); // use it
 
-  let stat;
-
-  try {
-    stat = lstatSync(pkgPath);
-  } catch (e) {
-    err("no package.json file found");
+  // dedupe if writing files
+  if (cli.flags.write) {
+    inputs = Array.from(new Set(inputs));
   }
 
-  if (stat.isDirectory()) {
-    pkgPath = join(pkgPath, "package.json");
-  }
+  inputs.forEach((input) => {
+    processPackage(input, cli.flags.write);
+  });
+}
 
+function invalidInput(path) {
+  err(`invalid input: ${path}`);
+}
+
+function processPackage(input, write = false) {
   try {
-    const pkgData = readFileSync(pkgPath);
+    const pkgData = readFileSync(input);
     const inputPkg = JSON.parse(pkgData);
     const formattedPkg = nicePackageJson(inputPkg);
-    if (cli.flags.write === true) {
+    if (write === true) {
       if (pkgData.toString() !== formattedPkg) {
-        writeFileSync(pkgPath, formattedPkg);
+        writeFileSync(input, formattedPkg);
       }
     } else {
       process.stdout.write(formattedPkg);
@@ -72,6 +76,30 @@ function main() {
     console.error("Unknown Error:", e);
     process.exit(1);
   }
+}
+
+function resolveInput(input) {
+  let stat;
+
+  input = resolve(process.cwd(), input);
+
+  try {
+    stat = lstatSync(input);
+  } catch (e) {
+    invalidInput(input);
+  }
+
+  if (stat.isDirectory()) {
+    input = join(input, "package.json");
+
+    try {
+      lstatSync(input);
+    } catch (e) {
+      invalidInput(input);
+    }
+  }
+
+  return input;
 }
 
 main();
