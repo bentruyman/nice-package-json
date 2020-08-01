@@ -79,7 +79,7 @@ await fs.writeFile("package.json", nicePackageJson(pkg));
   - `workspaces`
   - Everything else, sorted alphabetically (e.g. `eslintConfig`, `jest`, etc.)
 - Values of the following keys will be sorted alphabetically:
-  - `contributors` (by `name`)
+  - `contributors` (by `name` or value)
   - `engines` (by key)
   - `files`
   - `keywords`
