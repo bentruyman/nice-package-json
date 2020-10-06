@@ -15,7 +15,10 @@
   "author": "Ben Truyman <ben@truyman.com>",
   "license": "MIT",
   "scripts": {
-    "format": "prettier --prose-wrap always --write '**/*.js' README.md",
+    "format": "yarn format:docs && yarn format:pkg && yarn format:src",
+    "format:docs": "prettier --prose-wrap always --write README.md",
+    "format:pkg": "./bin.js --write",
+    "format:src": "prettier --write '**/*.js'",
     "test": "jest"
   },
   "dependencies": {
