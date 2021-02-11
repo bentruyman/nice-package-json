@@ -13,8 +13,9 @@
     "npm": "6.0.0"
   },
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "browser": "dist/browser/index.js",
+  "main": "dist/main/index.js",
+  "module": "dist/module/index.js",
   "svelte": "src/index.js",
   "bin": "bin.js",
   "files": [
