@@ -8,6 +8,7 @@ const KEY_ORDER = [
   "keywords",
   "engines",
   "type",
+  "browser",
   "main",
   "module",
   "svelte",
