@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/bentruyman/nice-package-json/compare/v1.4.0...v1.5.0) (2021-02-11)
+
+
+### Features
+
+* add support for 'browser' field ([7a0ac16](https://github.com/bentruyman/nice-package-json/commit/7a0ac164a643718d9d64f4988f0cb84fa282fe2c))
+
 ## [1.4.0](https://github.com/bentruyman/nice-package-json/compare/v1.3.0...v1.4.0) (2020-08-01)
 
 
