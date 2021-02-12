@@ -20,6 +20,7 @@ exports[`$ nice-package-json /path/to/dir prints a formatted package.json from t
   \\"main\\": \\"dist/main/index.js\\",
   \\"module\\": \\"dist/module/index.js\\",
   \\"svelte\\": \\"src/index.js\\",
+  \\"types\\": \\"dist/index.d.ts\\",
   \\"bin\\": \\"bin.js\\",
   \\"files\\": [
     \\"src\\",
@@ -107,6 +108,7 @@ exports[`$ nice-package-json /path/to/package.json prints a formatted package.js
   \\"main\\": \\"dist/main/index.js\\",
   \\"module\\": \\"dist/module/index.js\\",
   \\"svelte\\": \\"src/index.js\\",
+  \\"types\\": \\"dist/index.d.ts\\",
   \\"bin\\": \\"bin.js\\",
   \\"files\\": [
     \\"src\\",
@@ -194,6 +196,7 @@ exports[`$ nice-package-json {foo,bar}/package.json prints formatted package.jso
   \\"main\\": \\"dist/main/index.js\\",
   \\"module\\": \\"dist/module/index.js\\",
   \\"svelte\\": \\"src/index.js\\",
+  \\"types\\": \\"dist/index.d.ts\\",
   \\"bin\\": \\"bin.js\\",
   \\"files\\": [
     \\"src\\",
@@ -275,6 +278,7 @@ exports[`$ nice-package-json {foo,bar}/package.json prints formatted package.jso
   \\"main\\": \\"dist/main/index.js\\",
   \\"module\\": \\"dist/module/index.js\\",
   \\"svelte\\": \\"src/index.js\\",
+  \\"types\\": \\"dist/index.d.ts\\",
   \\"bin\\": \\"bin.js\\",
   \\"files\\": [
     \\"src\\",
@@ -360,6 +364,7 @@ exports[`$ nice-package-json prints a formatted package.json from the current di
   \\"main\\": \\"dist/main/index.js\\",
   \\"module\\": \\"dist/module/index.js\\",
   \\"svelte\\": \\"src/index.js\\",
+  \\"types\\": \\"dist/index.d.ts\\",
   \\"bin\\": \\"bin.js\\",
   \\"files\\": [
     \\"src\\",
