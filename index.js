@@ -12,6 +12,7 @@ const KEY_ORDER = [
   "main",
   "module",
   "svelte",
+  "types",
   "bin",
   "files",
   "homepage",

@@ -17,6 +17,7 @@
   "main": "dist/main/index.js",
   "module": "dist/module/index.js",
   "svelte": "src/index.js",
+  "types": "dist/index.d.ts",
   "bin": "bin.js",
   "files": [
     "src",

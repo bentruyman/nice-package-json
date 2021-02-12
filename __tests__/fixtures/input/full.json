@@ -13,6 +13,7 @@
   "keywords": ["c", "b", "a"],
   "files": ["test", "src"],
   "bin": "bin.js",
+  "types": "dist/index.d.ts",
   "main": "dist/main/index.js",
   "browser": "dist/browser/index.js",
   "repository": {
