@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/bentruyman/nice-package-json/compare/v1.5.0...v1.6.0) (2021-02-12)
+
+
+### Features
+
+* add support for 'types' field ([e2f76ce](https://github.com/bentruyman/nice-package-json/commit/e2f76ce23e6ae4b2f1683f12a6175bfe6bf1fa41))
+
 ## [1.5.0](https://github.com/bentruyman/nice-package-json/compare/v1.4.0...v1.5.0) (2021-02-11)
 
 
