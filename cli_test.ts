@@ -43,11 +43,15 @@ async function exec(
   };
 }
 
+function resolve(path: string): string {
+  return join(path);
+}
+
 Deno.test("$ nice-package-json | prints a formatted package.json from the current directory", async () => {
   const dir = Deno.makeTempDirSync();
 
   Deno.copyFileSync(
-    "./fixtures/input/full.json",
+    resolve("./fixtures/input/full.json"),
     join(dir, "package.json"),
   );
 
@@ -59,8 +63,8 @@ Deno.test("$ nice-package-json | prints a formatted package.json from the curren
 
 Deno.test("$ nice-package-json --write | overwrites an existing package.json if changes are made", async () => {
   const dir = Deno.makeTempDirSync();
-  const inputFile = "./fixtures/input/full.json";
-  const expectedFile = "./fixtures/expected/full.json";
+  const inputFile = resolve("./fixtures/input/full.json");
+  const expectedFile = resolve("./fixtures/expected/full.json");
   const targetPkg = join(dir, "package.json");
 
   Deno.copyFileSync(inputFile, targetPkg);
@@ -78,7 +82,7 @@ Deno.test("$ nice-package-json --write | overwrites an existing package.json if 
 
 Deno.test("$ nice-package-json --write | doesn't touch an existing package.json if no changes are made", async () => {
   const dir = Deno.makeTempDirSync();
-  const inputFile = "./fixtures/expected/full.json";
+  const inputFile = resolve("./fixtures/expected/full.json");
   const targetPkg = join(dir, "package.json");
 
   Deno.copyFileSync(inputFile, targetPkg);
@@ -92,7 +96,7 @@ Deno.test("$ nice-package-json --write | doesn't touch an existing package.json 
 
 Deno.test("$ nice-package-json /path/to/dir | prints a formatted package.json from the specified directory", async () => {
   const dir = Deno.makeTempDirSync();
-  const inputFile = "./fixtures/expected/full.json";
+  const inputFile = resolve("./fixtures/expected/full.json");
   const targetPkg = join(dir, "package.json");
 
   Deno.copyFileSync(inputFile, targetPkg);
@@ -116,7 +120,7 @@ Deno.test("$ nice-package-json /path/to/package.json | prints a formatted packag
   const dir = Deno.makeTempDirSync();
 
   Deno.copyFileSync(
-    "./fixtures/input/full.json",
+    resolve("./fixtures/input/full.json"),
     join(dir, "package.json"),
   );
   const { status, stdout, stderr } = await exec({ cwd: dir }, [
@@ -143,11 +147,11 @@ Deno.test("$ nice-package-json {foo,bar}/package.json | prints formatted package
   const dirB = Deno.makeTempDirSync();
 
   Deno.copyFileSync(
-    "./fixtures/input/full.json",
+    resolve("./fixtures/input/full.json"),
     join(dirA, "package.json"),
   );
   Deno.copyFileSync(
-    "./fixtures/input/full.json",
+    resolve("./fixtures/input/full.json"),
     join(dirB, "package.json"),
   );
   const { status, stdout, stderr } = await exec({ cwd: __dirname }, [
@@ -164,11 +168,14 @@ Deno.test("$ nice-package-json --write | overwrites existing package.json files 
   const dirA = Deno.makeTempDirSync();
   const dirB = Deno.makeTempDirSync();
 
-  const inputFullFile = "./fixtures/input/full.json";
-  const inputPartialFile = "./fixtures/input/partial.json";
+  const inputFullFile = resolve("./fixtures/input/full.json");
+  const inputPartialFile = resolve("./fixtures/input/partial.json");
 
-  const expectedFullFile = "./fixtures/expected/full.json";
-  const expectedPartialFile = "./fixtures/expected/partial.json";
+  const expectedFullFile = resolve("./fixtures/expected/full.json");
+  const expectedPartialFile = join(
+    __dirname,
+    "./fixtures/expected/partial.json",
+  );
 
   const targetPkgA = join(dirA, "package.json");
   const targetPkgB = join(dirB, "package.json");
