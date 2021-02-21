@@ -49,6 +49,7 @@ function resolve(path: string): string {
 
 Deno.test("$ nice-package-json | prints a formatted package.json from the current directory", async () => {
   const dir = Deno.makeTempDirSync();
+  console.log({ dir });
 
   Deno.copyFileSync(
     resolve("./fixtures/input/full.json"),
@@ -62,44 +63,44 @@ Deno.test("$ nice-package-json | prints a formatted package.json from the curren
 });
 
 Deno.test("$ nice-package-json --write | overwrites an existing package.json if changes are made", async () => {
-  const dir = Deno.makeTempDirSync();
+  const dir = await Deno.makeTempDir();
   const inputFile = resolve("./fixtures/input/full.json");
   const expectedFile = resolve("./fixtures/expected/full.json");
   const targetPkg = join(dir, "package.json");
 
-  Deno.copyFileSync(inputFile, targetPkg);
+  await Deno.copyFile(inputFile, targetPkg);
 
   assertNotEquals(
-    JSON.parse(Deno.readTextFileSync(targetPkg)),
-    JSON.parse(Deno.readTextFileSync(expectedFile)),
+    JSON.parse(await Deno.readTextFile(targetPkg)),
+    JSON.parse(await Deno.readTextFile(expectedFile)),
   );
   await exec({ cwd: dir }, ["--write"]);
   assertEquals(
-    JSON.parse(Deno.readTextFileSync(targetPkg)),
-    JSON.parse(Deno.readTextFileSync(expectedFile)),
+    JSON.parse(await Deno.readTextFile(targetPkg)),
+    JSON.parse(await Deno.readTextFile(expectedFile)),
   );
 });
 
 Deno.test("$ nice-package-json --write | doesn't touch an existing package.json if no changes are made", async () => {
-  const dir = Deno.makeTempDirSync();
+  const dir = await Deno.makeTempDir();
   const inputFile = resolve("./fixtures/expected/full.json");
   const targetPkg = join(dir, "package.json");
 
-  Deno.copyFileSync(inputFile, targetPkg);
+  await Deno.copyFile(inputFile, targetPkg);
 
-  const beforeModifiedTime = Deno.statSync(targetPkg).mtime;
+  const beforeModifiedTime = (await Deno.stat(targetPkg)).mtime;
   await exec({ cwd: dir }, ["--write"]);
-  const afterModifiedTime = Deno.statSync(targetPkg).mtime;
+  const afterModifiedTime = (await Deno.stat(targetPkg)).mtime;
 
   assertEquals(beforeModifiedTime, afterModifiedTime);
 });
 
 Deno.test("$ nice-package-json /path/to/dir | prints a formatted package.json from the specified directory", async () => {
-  const dir = Deno.makeTempDirSync();
+  const dir = await Deno.makeTempDir();
   const inputFile = resolve("./fixtures/expected/full.json");
   const targetPkg = join(dir, "package.json");
 
-  Deno.copyFileSync(inputFile, targetPkg);
+  await Deno.copyFile(inputFile, targetPkg);
 
   const { status, stdout, stderr } = await exec({ cwd: __dirname }, [dir]);
   assert(status.success);
@@ -117,9 +118,9 @@ Deno.test("$ nice-package-json /path/to/dir | shows an error when no package.jso
 });
 
 Deno.test("$ nice-package-json /path/to/package.json | prints a formatted package.json using the specified file", async () => {
-  const dir = Deno.makeTempDirSync();
+  const dir = await Deno.makeTempDir();
 
-  Deno.copyFileSync(
+  await Deno.copyFile(
     resolve("./fixtures/input/full.json"),
     join(dir, "package.json"),
   );

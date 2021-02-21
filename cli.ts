@@ -51,7 +51,7 @@ function processPackage(input: string, write: boolean) {
     const inputPkg = JSON.parse(pkgData);
     const formattedPkg = nicePackageJson(inputPkg);
     if (write === true) {
-      if (pkgData.toString() !== formattedPkg) {
+      if (pkgData !== formattedPkg) {
         Deno.writeTextFileSync(input, formattedPkg);
       }
     } else {
