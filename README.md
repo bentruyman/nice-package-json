@@ -1,5 +1,7 @@
 # nice-package-json
 
+[![Build status](https://github.com/bentruyman/nice-package-json/actions/workflows/build.yml/badge.svg)](https://github.com/bentruyman/nice-package-json/actions/workflows/build.yml)
+
 > An opinionated formatter for `package.json` files
 
 ## Installation
