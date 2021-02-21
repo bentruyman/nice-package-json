@@ -49,7 +49,6 @@ function resolve(path: string): string {
 
 Deno.test("$ nice-package-json | prints a formatted package.json from the current directory", async () => {
   const dir = Deno.makeTempDirSync();
-  console.log({ dir });
 
   Deno.copyFileSync(
     resolve("./fixtures/input/full.json"),
