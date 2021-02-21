@@ -3,6 +3,8 @@ import { cac } from "https://unpkg.com/cac/mod.ts";
 
 import nicePackageJson from "./mod.ts";
 
+const pkg = JSON.parse(Deno.readTextFileSync("./package.json"));
+
 main();
 
 function main() {
@@ -12,7 +14,7 @@ function main() {
     .option("--write", "Overwrite input with formatted output")
     .usage("[options] [file]")
     .help()
-    .version("2.0.0");
+    .version(pkg.version);
 
   const { args, options } = app.parse();
   if (options.help || options.version) Deno.exit(0);
