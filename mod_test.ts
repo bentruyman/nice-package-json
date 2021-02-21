@@ -1,5 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.88.0/testing/asserts.ts";
-
+import { assertEquals } from "./deps_dev.ts";
 import nicePackageJson from "./mod.ts";
 
 Deno.test("full.json", async () => {

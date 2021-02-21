@@ -1,6 +1,4 @@
-import { join, resolve } from "https://deno.land/std@0.88.0/path/mod.ts";
-import { cac } from "https://unpkg.com/cac/mod.ts";
-
+import { cac, join, resolve } from "./deps.ts";
 import nicePackageJson from "./mod.ts";
 
 const pkg = JSON.parse(Deno.readTextFileSync("./package.json"));

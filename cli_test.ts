@@ -1,10 +1,11 @@
-import { dirname, join } from "https://deno.land/std@0.88.0/path/mod.ts";
 import {
   assert,
   assertEquals,
   assertMatch,
   assertNotEquals,
-} from "https://deno.land/std@0.88.0/testing/asserts.ts";
+  dirname,
+  join,
+} from "./deps_dev.ts";
 
 const ROOT = dirname(import.meta.url);
 const BIN = join(ROOT, "cli.ts");
