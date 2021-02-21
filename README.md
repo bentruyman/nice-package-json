@@ -1,48 +1,54 @@
 # nice-package-json
 
-[![Build Status](https://travis-ci.org/bentruyman/nice-package-json.svg?branch=develop)](https://travis-ci.org/bentruyman/nice-package-json)
-
 > An opinionated formatter for `package.json` files
+
+## Installation
+
+```console
+$ deno install --allow-{read,write} -n nice-package-json \
+    https://raw.githubusercontent.com/bentruyman/nice-package-json/master/cli.ts
+```
 
 ## Usage
 
 Print a formatted `package.json` file from the current working directory:
 
 ```console
-$ npx nice-package-json
+$ nice-package-json
 ```
 
 Format and overwrite the `package.json` in the current working directory:
 
 ```console
-$ npx nice-package-json --write
+$ nice-package-json --write
 ```
 
 Or format a file named something other than `package.json`:
 
 ```console
-$ npx nice-package-json --write pkg.json
+$ nice-package-json --write pkg.json
 ```
 
 Compare with the current `package.json` file:
 
 ```console
-$ npx nice-package-json | diff package.json -
+$ nice-package-json | diff package.json -
 ```
 
 Format each `package.json` in a Yarn-managed monorepo:
 
 ```console
-$ yarn add -DW nice-package-json # only run once
 $ yarn workspaces run nice-package-json --write
 ```
 
 ### Programmatically
 
-```javascript
-const nicePkg = require("nice-package-json");
-const pkg = require("./package.json");
-await fs.writeFile("package.json", nicePackageJson(pkg));
+```typescript
+import nicePackageJson from "nice-package-json";
+
+const contents = Deno.readTextFileSync("./package.json");
+const json = JSON.parse(contents);
+Deno.writeTextFileSync("./package.json", nicePackageJson(json));
 ```
 
 ## Formatting
