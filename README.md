@@ -6,7 +6,7 @@
 
 ```console
 $ deno install --allow-{read,write} -n nice-package-json \
-    https://raw.githubusercontent.com/bentruyman/nice-package-json/master/cli.ts
+    https://deno.land/x/nice_package_json/cli.ts
 ```
 
 ## Usage
@@ -44,7 +44,7 @@ $ yarn workspaces run nice-package-json --write
 ### Programmatically
 
 ```typescript
-import nicePackageJson from "nice-package-json";
+import nicePackageJson from "https://deno.land/x/nice_package_json/mod.ts";
 
 const contents = Deno.readTextFileSync("./package.json");
 const json = JSON.parse(contents);
