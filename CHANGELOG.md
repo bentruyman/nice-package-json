@@ -1,3 +1,15 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.1.0](https://github.com/bentruyman/nice-package-json/compare/v2.0.0...v2.1.0) (2021-02-22)
+
+
+### Features
+
+* add support for 'funding' field ([2d971b4](https://github.com/bentruyman/nice-package-json/commit/2d971b4586349b627a88c2a79f75192ac3fb24ee))
+* add support for 'os' field ([4cb87e2](https://github.com/bentruyman/nice-package-json/commit/4cb87e2b20ad6094908a21c65d2a9237190f8d50))
+
 # [2.0.0](https://github.com/bentruyman/nice-package-json/compare/v1.6.1...v2.0.0) (2021-02-21)
 
 
@@ -45,6 +57,3 @@
 ### Features
 
 * allow for multiple inputs ([117be0a](https://github.com/bentruyman/nice-package-json/commit/117be0a88538e29145fe2d04152e3eb21927701a)), closes [#1](https://github.com/bentruyman/nice-package-json/issues/1)
-
-
-
