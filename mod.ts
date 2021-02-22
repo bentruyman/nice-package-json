@@ -18,6 +18,7 @@ const KEY_ORDER = [
   "repository",
   "author",
   "contributors",
+  "funding",
   "license",
   "scripts",
   "dependencies",
