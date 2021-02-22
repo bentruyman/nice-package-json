@@ -41,6 +41,10 @@
     "test": "./test.sh",
     "lint": "./lint.sh"
   },
+  "os": [
+    "darwin",
+    "linux"
+  ],
   "bundledDependencies": {
     "lodash": "^2.0.0",
     "express": "^1.0.0"
