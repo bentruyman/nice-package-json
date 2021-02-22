@@ -1,7 +1,6 @@
 import { cac, join, resolve } from "./deps.ts";
 import nicePackageJson from "./mod.ts";
-
-const pkg = JSON.parse(Deno.readTextFileSync("./package.json"));
+import { VERSION } from "./version.ts";
 
 main();
 
@@ -12,7 +11,7 @@ function main() {
     .option("--write", "Overwrite input with formatted output")
     .usage("[options] [file]")
     .help()
-    .version(pkg.version);
+    .version(VERSION);
 
   const { args, options } = app.parse();
   if (options.help || options.version) Deno.exit(0);
