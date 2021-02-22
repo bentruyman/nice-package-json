@@ -42,6 +42,10 @@
     "test": "./test.sh",
     "lint": "./lint.sh"
   },
+  "cpu": [
+    "x64",
+    "arm"
+  ],
   "os": [
     "darwin",
     "linux"
