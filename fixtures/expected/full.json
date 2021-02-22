@@ -16,6 +16,10 @@
     "darwin",
     "linux"
   ],
+  "cpu": [
+    "x64",
+    "arm"
+  ],
   "type": "module",
   "browser": "dist/browser/index.js",
   "main": "dist/main/index.js",
