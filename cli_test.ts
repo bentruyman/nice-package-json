@@ -5,7 +5,7 @@ import {
   assertNotEquals,
   dirname,
   join,
-} from "./deps_dev.ts";
+} from "./dev_deps.ts";
 
 const ROOT = dirname(import.meta.url);
 const BIN = join(ROOT, "cli.ts");
