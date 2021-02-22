@@ -5,6 +5,7 @@ const KEY_ORDER = [
   "description",
   "keywords",
   "engines",
+  "os",
   "type",
   "browser",
   "main",
