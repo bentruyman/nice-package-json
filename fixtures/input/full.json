@@ -22,6 +22,7 @@
   },
   "homepage": "https://host.com/test/repo",
   "bugs": "https://host.com/test/repo/issues",
+  "funding": "https://host.com/donate",
   "contributors": [
     {
       "name": "John Smith",

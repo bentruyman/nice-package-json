@@ -42,6 +42,7 @@
     },
     "John Smith <john.smith@host.com>"
   ],
+  "funding": "https://host.com/donate",
   "license": "MIT",
   "scripts": {
     "build": "./build.sh",
